@@ -1,12 +1,12 @@
-<script setup>
-import { ref } from 'vue'
+<script setup lang="ts">
+import { onMounted } from 'vue'
 
+onMounted(() => {
+  window.parent.postMessage('Hello from the extension!', "*")
+})
 </script>
-
 <template>
-  <div class="box">
-    <h1 class="text-purple-500 text-3xl">Hello Vue!</h1>
+  <div class="flex justify-center items-center h-full">
+    <h1 class="text-4xl">Hello World!</h1>
   </div>
 </template>
-
-<style></style>
